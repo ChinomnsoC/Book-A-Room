@@ -3,7 +3,7 @@ import { render, fireEvent, screen } from '@testing-library/react';
 import GroupRooms from './GroupRooms';
 
 describe('GroupRooms Component', () => {
-  test('it renders group rooms button correctly', () => {
+  test('it renders Group Rooms button correctly', () => {
     const onSelectCategory = jest.fn();
     render(<GroupRooms onSelectCategory={onSelectCategory} />);
     const buttonElement = screen.getByText('Group Rooms');
@@ -11,7 +11,7 @@ describe('GroupRooms Component', () => {
     expect(buttonElement).toHaveClass('category-button');
   });
 
-  test('it calls onSelectCategory when the group rooms button is clicked', () => {
+  test('it calls onSelectCategory when the Group Rooms button is clicked', () => {
     const onSelectCategory = jest.fn();
     render(<GroupRooms onSelectCategory={onSelectCategory} />);
     const buttonElement = screen.getByText('Group Rooms');
