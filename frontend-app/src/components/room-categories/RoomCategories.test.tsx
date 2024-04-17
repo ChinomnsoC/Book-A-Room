@@ -1,38 +1,34 @@
-import React from "react";
+import React from 'react';
 import { render, screen } from '@testing-library/react';
-import RoomCategories from "./RoomCategories";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
+import RoomCategories from './RoomCategories';
 
-describe('RoomCategories', () => {
-    test('it renders all room categories correctly', () => {
-        render(
-            <BrowserRouter>
-                <RoomCategories />
-            </BrowserRouter>
-        );
+describe('RoomCategories Component', () => {
+  test('renders all room categories correctly', () => {
+    render(
+      <BrowserRouter>
+        <RoomCategories />
+      </BrowserRouter>
+    );
 
-        const ensuiteButton = screen.getByText('Ensuite Bedrooms')
-        const groupButton = screen.getByText('Group Rooms')
-        const hostelButton = screen.getByText('Hostels')
+    expect(screen.getByText('Ensuite Bedrooms')).toBeInTheDocument();
+    expect(screen.getByText('Group Rooms')).toBeInTheDocument();
+    expect(screen.getByText('Hostels')).toBeInTheDocument();
+  });
 
-        expect(ensuiteButton).toBeInTheDocument();
-        expect(groupButton).toBeInTheDocument();
-        expect(hostelButton).toBeInTheDocument();
-    });
+  test('links to correct routes', () => {
+    render(
+      <BrowserRouter>
+        <RoomCategories />
+      </BrowserRouter>
+    );
 
-    test('it links to the correct routes', () => {
-        render(
-            <BrowserRouter>
-                <RoomCategories />
-            </BrowserRouter>
-        );
+    const ensuiteLink = screen.getByRole('link', { name: /Ensuite Bedrooms/i });
+    const groupLink = screen.getByRole('link', { name: /Group Rooms/i });
+    const hostelLink = screen.getByRole('link', { name: /Hostels/i });
 
-        const ensuiteLink = screen.getByRole('link', { name: /Ensuite Bedrooms/i });
-        const groupLink = screen.getByRole('link', { name: /Group Rooms/i });
-        const hostelLink = screen.getByRole('link', { name: /Hostels/i });
-
-        expect(ensuiteLink).toHaveAttribute('href', '/rooms/ensuite');
-        expect(groupLink).toHaveAttribute('href', '/rooms/group');
-        expect(hostelLink).toHaveAttribute('href', '/rooms/hostel');
-    });
+    expect(ensuiteLink).toHaveAttribute('href', '/rooms/ensuite');
+    expect(groupLink).toHaveAttribute('href', '/rooms/group');
+    expect(hostelLink).toHaveAttribute('href', '/rooms/hostel');
+  });
 });
