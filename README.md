@@ -33,8 +33,8 @@ To set up the backend, at the root directory of the cloned repository, run:
 
 To run the tests for the front end:
 - cd into frontend-app
-- run `npm test`.
+- run `npm test`
   
-To run the tests for the back end, 
+To run the tests for the back end: 
 - cd into book-a-room-backend
-- run `poetry run pytest`.
+- run `poetry run pytest`
