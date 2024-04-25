@@ -31,9 +31,9 @@ To set up the backend, at the root directory of the cloned repository, run:
 
 ## Testing
 
-To run the tests for the front end:\
+To run the tests for the front end:
 - cd into frontend-app
-- run `npm test`.\
+- run `npm test`.
   
 To run the tests for the back end, 
 - cd into book-a-room-backend
