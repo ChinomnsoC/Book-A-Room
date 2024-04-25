@@ -1,12 +1,16 @@
-# Book A Room
+# Book A Room (work in progress)
 
 An accommodation booking website for fixed meetings throughout the year. The aim is to make it a user-friendly site that can take up a high surge in server load about 3-4 times a year.
+
+## Prerequisites
+- Python 3.10 at the least
+- 
 
 ## Set Up Book A Room
 
 Clone the repository to a local device by running: `git clone https://github.com/ChinomnsoC/book-a-room.git` in a preferred directory.
 
-To setup the whole project, at the root directory, run:
+To set up the whole project, at the root directory, run:
 
 ### `make start`
 
