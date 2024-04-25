@@ -8,27 +8,30 @@ An accommodation booking website for fixed meetings throughout the year. The aim
 
 ## Set Up Book A Room
 
-Clone the repository to a local device by running: `git clone https://github.com/ChinomnsoC/book-a-room.git` in a preferred directory.
+Clone the repository to a local device by running: `git clone https://github.com/ChinomnsoC/book-a-room.git` in a preferred directory in a terminal.
 
-To set up the whole project, at the root directory, run:
+To set up the whole project, at the root directory of the cloned repository, run:
 
 ### `make start`
 
-To set up the frontend, at the root directory, run:
+To set up the front end, at the root directory of the cloned repository, run:
 
 ### `make frontend-start`
 
-Runs the app in the development mode.\
+`make frontend-start` runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 
-To set up the backend, at the root directory, run:
+To set up the backend, at the root directory of the cloned repository, run:
 
 ### `make backend-start`
 
 ## Testing
 
-### `npm test`
+To run the tests for the front end, run `npm test` at the root directory of the frontend app.
+To run the tests for the back end, 
+- cd into book-a-room-backend
+- run `poetry run pytest`.
